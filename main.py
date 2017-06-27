@@ -1,3 +1,4 @@
+
 #Import variables from existing file.
 from spy_details import spy, Spy, ChatMessage, friends
 #Import class from file for encoding and decoding hidden messages.
@@ -192,7 +193,12 @@ def start_chat(spy):
         print "Your age is not suitable."
 
 if existing.upper() == "Y":
-    start_chat(spy)
+    password= raw_input('enter your password!')
+    if password =='admin':
+        start_chat(spy)
+    else:
+        print 'password incorrect!'
+
 else:
     spy = Spy('','',0,0.0)
     spy.name = raw_input("Welcome to spy chat. Please enter your name.")
